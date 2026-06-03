@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدماتنا | الأغا للنقل</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .page-header {
+            padding: 120px 0 60px;
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+        }
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            display: inline-block;
+            padding: 20px;
+            background-color: rgba(245, 158, 11, 0.1);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-truck-fast"></i>
+                <span>الأغا للنقل</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="services.html" class="active">خدماتنا</a>
+                <a href="fleet.html">أسطولنا</a>
+                <a href="reviews.html">آراء العملاء</a>
+                <a href="contact.html">اتصل بنا</a>
+                <a href="quote.html" class="btn btn-primary" style="color: white;">عرض سعر</a>
+            </div>
+
+            <div style="display: flex; gap: 15px; align-items: center;">
+                <button class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container" data-aos="fade-down">
+            <h1>خدماتنا المتميزة</h1>
+            <p style="color: #cbd5e1; max-width: 600px; margin: 0 auto;">نقدم مجموعة متكاملة من خدمات النقل والشحن والتخزين لتلبية كافة احتياجاتكم باحترافية عالية.</p>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="grid-3">
+                <!-- Service 1 -->
+                <div class="card text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon"><i class="fas fa-home"></i></div>
+                    <h3>نقل المنازل</h3>
+                    <p>خدمة نقل أثاث منزلك بأمان تام، مع خدمات التغليف والفك والتركيب بواسطة فريق متخصص للحفاظ على ممتلكاتك الثمينة.</p>
+                    <a href="quote.html" class="btn btn-outline" style="margin-top: 15px;">اطلب الخدمة</a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="card text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon"><i class="fas fa-building"></i></div>
+                    <h3>نقل المكاتب</h3>
+                    <p>نقل معدات وأثاث الشركات والمكاتب بسرعة وكفاءة لضمان عدم توقف سير العمل وتقليل وقت التوقف إلى الحد الأدنى.</p>
+                    <a href="quote.html" class="btn btn-outline" style="margin-top: 15px;">اطلب الخدمة</a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="card text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon"><i class="fas fa-route"></i></div>
+                    <h3>الشحن بين المدن</h3>
+                    <p>شحن سريع وموثوق بين جميع المدن مع تتبع للشحنات وضمان وصولها في الوقت المحدد وفي حالة ممتازة.</p>
+                    <a href="quote.html" class="btn btn-outline" style="margin-top: 15px;">اطلب الخدمة</a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="card text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon"><i class="fas fa-boxes"></i></div>
+                    <h3>نقل البضائع</h3>
+                    <p>حلول لوجستية متكاملة لنقل البضائع التجارية للشركات والمصانع بأسطول شاحنات مجهز ومستعد لأي حمولة.</p>
+                    <a href="quote.html" class="btn btn-outline" style="margin-top: 15px;">اطلب الخدمة</a>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 الأغا للنقل. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 50 });
+    </script>
+</body>
+</html>

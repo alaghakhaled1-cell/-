@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آراء العملاء | الأغا للنقل</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .page-header {
+            padding: 120px 0 60px;
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+        }
+        .review-card {
+            background: var(--bg-white);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+        .review-stars {
+            color: #fbbf24;
+            margin-bottom: 10px;
+        }
+        .review-author {
+            font-weight: bold;
+            margin-top: 15px;
+            color: var(--primary-color);
+        }
+        .review-date {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+        .add-review-section {
+            background: var(--bg-light);
+            padding: 40px;
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+        .star-rating {
+            direction: rtl;
+            display: inline-flex;
+            font-size: 1.5rem;
+            color: #cbd5e1;
+            cursor: pointer;
+        }
+        .star-rating input {
+            display: none;
+        }
+        .star-rating label {
+            padding: 0 5px;
+        }
+        .star-rating label:hover,
+        .star-rating label:hover ~ label,
+        .star-rating input:checked ~ label {
+            color: #fbbf24;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-truck-fast"></i>
+                <span>الأغا للنقل</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="services.html">خدماتنا</a>
+                <a href="fleet.html">أسطولنا</a>
+                <a href="reviews.html" class="active">آراء العملاء</a>
+                <a href="contact.html">اتصل بنا</a>
+                <a href="quote.html" class="btn btn-primary" style="color: white;">عرض سعر</a>
+            </div>
+
+            <div style="display: flex; gap: 15px; align-items: center;">
+                <button class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container" data-aos="fade-down">
+            <h1>آراء عملائنا</h1>
+            <p style="color: #cbd5e1; max-width: 600px; margin: 0 auto;">نفخر بثقة عملائنا ونسعى دائماً لتقديم أفضل مستويات الخدمة. اقرأ ما يقولونه عنا.</p>
+        </div>
+    </header>
+
+    <!-- Reviews Section -->
+    <section class="section-padding">
+        <div class="container">
+            
+            <!-- Reviews List -->
+            <div id="reviewsList" class="grid-2">
+                <!-- Reviews will be populated here via JavaScript -->
+            </div>
+
+            <!-- Add Review Form -->
+            <div class="add-review-section" data-aos="fade-up">
+                <h3>أضف تقييمك</h3>
+                <form id="reviewForm" style="margin-top: 20px;">
+                    <div class="form-group">
+                        <label>التقييم:</label>
+                        <div class="star-rating">
+                            <input type="radio" id="star5" name="rating" value="5" required><label for="star5" class="fas fa-star"></label>
+                            <input type="radio" id="star4" name="rating" value="4"><label for="star4" class="fas fa-star"></label>
+                            <input type="radio" id="star3" name="rating" value="3"><label for="star3" class="fas fa-star"></label>
+                            <input type="radio" id="star2" name="rating" value="2"><label for="star2" class="fas fa-star"></label>
+                            <input type="radio" id="star1" name="rating" value="1"><label for="star1" class="fas fa-star"></label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="reviewerName">الاسم</label>
+                        <input type="text" id="reviewerName" class="form-control" required placeholder="اسمك الكريم">
+                    </div>
+                    <div class="form-group">
+                        <label for="reviewText">رأيك بخدماتنا</label>
+                        <textarea id="reviewText" class="form-control" rows="4" required placeholder="اكتب تجربتك معنا..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">إرسال التقييم</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 الأغا للنقل. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/reviews.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 50 });
+    </script>
+</body>
+</html>

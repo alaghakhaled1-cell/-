@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلب عرض سعر | الأغا للنقل</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .page-header {
+            padding: 120px 0 60px;
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+        }
+        .quote-form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--bg-white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            margin-top: -40px;
+            position: relative;
+            z-index: 10;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        @media (max-width: 600px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-truck-fast"></i>
+                <span>الأغا للنقل</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="services.html">خدماتنا</a>
+                <a href="fleet.html">أسطولنا</a>
+                <a href="reviews.html">آراء العملاء</a>
+                <a href="contact.html">اتصل بنا</a>
+                <a href="quote.html" class="btn btn-primary active" style="color: white;">عرض سعر</a>
+            </div>
+
+            <div style="display: flex; gap: 15px; align-items: center;">
+                <button class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container" data-aos="fade-down">
+            <h1>طلب عرض سعر</h1>
+            <p style="color: #cbd5e1; max-width: 600px; margin: 0 auto;">احصل على تسعيرة دقيقة ومنافسة لخدمات النقل والشحن. املأ النموذج أدناه وسنتواصل معك فوراً.</p>
+        </div>
+    </header>
+
+    <!-- Quote Form Section -->
+    <section class="section-padding" style="padding-top: 0;">
+        <div class="container">
+            <div class="quote-form-container" data-aos="fade-up">
+                <form id="quoteForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">الاسم الكامل *</label>
+                            <input type="text" id="name" class="form-control" required placeholder="أدخل اسمك الكريم">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف *</label>
+                            <input type="tel" id="phone" class="form-control" required placeholder="مثال: 05xxxxxxx">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="from">موقع الاستلام (من) *</label>
+                            <input type="text" id="from" class="form-control" required placeholder="المدينة، الحي">
+                        </div>
+                        <div class="form-group">
+                            <label for="to">موقع التسليم (إلى) *</label>
+                            <input type="text" id="to" class="form-control" required placeholder="المدينة، الحي">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="type">نوع الشحنة *</label>
+                        <select id="type" class="form-control" required>
+                            <option value="">اختر نوع الشحنة</option>
+                            <option value="أثاث منزلي">أثاث منزلي</option>
+                            <option value="أثاث مكتبي">أثاث مكتبي</option>
+                            <option value="بضائع تجارية">بضائع تجارية</option>
+                            <option value="مواد غذائية">مواد غذائية</option>
+                            <option value="أخرى">أخرى</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="details">تفاصيل الطلب *</label>
+                        <textarea id="details" class="form-control" rows="4" required placeholder="يرجى كتابة تفاصيل إضافية مثل حجم الشحنة، متطلبات التغليف، الخ..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.2rem; margin-top: 10px;">
+                        إرسال الطلب عبر الواتساب <i class="fab fa-whatsapp" style="margin-right: 5px;"></i>
+                    </button>
+                    <p id="formMessage" style="text-align: center; margin-top: 15px; color: green; display: none;">تم حفظ طلبك محلياً، وجاري تحويلك للواتساب...</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 الأغا للنقل. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/quote.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 50 });
+    </script>
+</body>
+</html>

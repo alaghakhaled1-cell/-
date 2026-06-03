@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أسطولنا | الأغا للنقل</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .page-header {
+            padding: 120px 0 60px;
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+        }
+        .fleet-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .fleet-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            aspect-ratio: 4/3;
+        }
+        .fleet-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        .fleet-item:hover img {
+            transform: scale(1.1);
+        }
+        .fleet-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 20px;
+            color: white;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+        .fleet-item:hover .fleet-info {
+            transform: translateY(0);
+        }
+        .capacity-badge {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-top: 5px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-truck-fast"></i>
+                <span>الأغا للنقل</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="services.html">خدماتنا</a>
+                <a href="fleet.html" class="active">أسطولنا</a>
+                <a href="reviews.html">آراء العملاء</a>
+                <a href="contact.html">اتصل بنا</a>
+                <a href="quote.html" class="btn btn-primary" style="color: white;">عرض سعر</a>
+            </div>
+
+            <div style="display: flex; gap: 15px; align-items: center;">
+                <button class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container" data-aos="fade-down">
+            <h1>أسطولنا المتنوع</h1>
+            <p style="color: #cbd5e1; max-width: 600px; margin: 0 auto;">نمتلك أسطولاً حديثاً ومجهزاً بأفضل التقنيات لتلبية جميع متطلبات الشحن والنقل بمختلف الأحجام والأوزان.</p>
+        </div>
+    </header>
+
+    <!-- Fleet Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>أنواع الشاحنات والسعات</h2>
+            </div>
+            
+            <div class="fleet-gallery">
+                <!-- Truck 1 -->
+                <div class="fleet-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="assets/images/truck1.jpg" alt="تريلا حمراء">
+                    <div class="fleet-info">
+                        <h3>دينا مغلقة (صندوق)</h3>
+                        <p>مثالية لنقل الأثاث والبضائع الحساسة</p>
+                        <span class="capacity-badge">السعة: 4 طن - الطول: 4.5 متر</span>
+                    </div>
+                </div>
+
+                <!-- Truck 2 -->
+                <div class="fleet-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="assets/images/truck2.png" alt="تريلا سوداء">
+                    <div class="fleet-info">
+                        <h3>تريلا (شاحنة نقل ثقيل)</h3>
+                        <p>للحمولات الكبيرة والشحن بين المدن</p>
+                        <span class="capacity-badge">السعة: 25 طن - الطول: 12 متر</span>
+                    </div>
+                </div>
+
+                <!-- Truck 3 -->
+                <div class="fleet-item" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="assets/images/truck1.jpg" alt="تريلا حمراء">
+                    <div class="fleet-info">
+                        <h3>وانيت (بيك أب)</h3>
+                        <p>للمشاوير السريعة والحمولات الخفيفة</p>
+                        <span class="capacity-badge">السعة: 1.5 طن</span>
+                    </div>
+                </div>
+
+                <!-- Truck 4 -->
+                <div class="fleet-item" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="assets/images/truck2.png" alt="تريلا سوداء">
+                    <div class="fleet-info">
+                        <h3>شاحنة تبريد</h3>
+                        <p>لنقل المواد الغذائية والأدوية</p>
+                        <span class="capacity-badge">تحكم بدرجة الحرارة حتى -18°C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 الأغا للنقل. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 50 });
+    </script>
+</body>
+</html>
